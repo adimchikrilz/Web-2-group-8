@@ -1,0 +1,145 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px; /* Adjusted padding to match Figma */
+  background: #ffffff; /* White background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Match Figma shadow */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 350px; /* Adjusted to match Figma */
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 24px; /* Adjusted to match Figma */
+  font-weight: 700;
+  color: #26A69A;
+}
+
+nav {
+  flex: 1; /* Allow nav to take up available space */
+  display: flex;
+  justify-content: center; /* Center the nav links */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px; /* Adjusted spacing to match Figma */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000; /* Black color to match Figma */
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #26A69A; /* Teal on hover */
+}
+
+nav ul li a.active-link {
+  color: #26A69A; /* Teal for active link */
+  font-weight: 700;
+  border-bottom: 2px solid #26A69A; /* Underline for active link */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.language-dropdown {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.globe-icon {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.header-right select {
+  border: none; /* Remove border to match Figma */
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+  appearance: none; /* Remove default dropdown arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 20px; /* Space for custom arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom dropdown arrow */
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.header-right select:focus {
+  outline: none;
+}
+
+.contact-btn {
+  padding: 8px 16px; /* Adjusted padding to match Figma */
+  background: #26A69A;
+  color: #fff;
+  border: none;
+  border-radius: 20px; /* More rounded corners to match Figma */
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #1e8e83; /* Darker teal on hover */
+}
+
+footer {
+  background: #26A69A;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+footer p {
+  font-size: 14px;
+}

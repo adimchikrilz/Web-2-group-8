@@ -1,0 +1,125 @@
+.quick-check-page {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .title-h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .real-or-fake {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .wallet-status {
+    margin-bottom: 20px;
+  }
+  
+  .connected {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .quick-check-form {
+    display: inline-block;
+  }
+  
+  .input-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .claim-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .upload-button,
+  .offline-toggle,
+  .verify-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .upload-button,
+  .offline-toggle {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+  }
+  
+  .verify-button {
+    background: #26A69A;
+    color: #fff;
+  border: none;
+}
+
+.upload-icon,
+.offline-icon {
+  margin-right: 5px;
+}
+
+.result-container {
+  text-align: center;
+}
+
+.result-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.result-title.true {
+  color: #00cc00;
+}
+
+.result-title.false {
+  color: #ff0000;
+}
+
+.result-title.uncertain {
+  color: #ff9900;
+}
+
+.result-explanation {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.blockchain-info {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.result-buttons {
+  margin-bottom: 20px;
+}
+
+.view-result-button,
+.check-another-button {
+  padding: 10px 20px;
+  background: #26A69A;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.learn-more-link {
+  background: none;
+  border: none;
+  color: #26A69A;
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,36 @@
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('textured-wall.jpeg') no-repeat center center/cover;
+    /* background: #fff; */
+    color: #333;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .hero h2 {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .cta-btn {
+    padding: 15px 30px;
+    background: #26A69A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
