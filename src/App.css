@@ -1,20 +1,10 @@
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px; /* Adjusted padding to match Figma */
-  background: #ffffff; /* White background */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Match Figma shadow */
+  padding: 20px 40px;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -26,20 +16,33 @@ header {
 }
 
 .logo img {
-  width: 350px; /* Adjusted to match Figma */
+  width: 350px;
   margin-right: 10px;
 }
 
 .logo span {
-  font-size: 24px; /* Adjusted to match Figma */
+  font-size: 24px;
   font-weight: 700;
   color: #26A69A;
 }
 
-nav {
-  flex: 1; /* Allow nav to take up available space */
+.header-actions {
   display: flex;
-  justify-content: center; /* Center the nav links */
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul {
@@ -50,25 +53,25 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 15px; /* Adjusted spacing to match Figma */
+  margin: 0 15px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #000000; /* Black color to match Figma */
+  color: #000000;
   font-weight: 500;
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #26A69A; /* Teal on hover */
+  color: #26A69A;
 }
 
 nav ul li a.active-link {
-  color: #26A69A; /* Teal for active link */
+  color: #26A69A;
   font-weight: 700;
-  border-bottom: 2px solid #26A69A; /* Underline for active link */
+  border-bottom: 2px solid #26A69A;
 }
 
 .header-right {
@@ -79,7 +82,7 @@ nav ul li a.active-link {
 .language-dropdown {
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .globe-icon {
@@ -87,32 +90,32 @@ nav ul li a.active-link {
   font-size: 16px;
 }
 
-.header-right select {
-  border: none; /* Remove border to match Figma */
+.language-dropdown select {
+  border: none;
   background: transparent;
   font-size: 16px;
   font-weight: 500;
   color: #000000;
   cursor: pointer;
-  appearance: none; /* Remove default dropdown arrow */
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  padding-right: 20px; /* Space for custom arrow */
-  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom dropdown arrow */
+  padding-right: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
   background-repeat: no-repeat;
   background-position: right center;
 }
 
-.header-right select:focus {
+.language-dropdown select:focus {
   outline: none;
 }
 
 .contact-btn {
-  padding: 8px 16px; /* Adjusted padding to match Figma */
+  padding: 8px 16px;
   background: #26A69A;
   color: #fff;
   border: none;
-  border-radius: 20px; /* More rounded corners to match Figma */
+  border-radius: 20px;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
@@ -120,26 +123,305 @@ nav ul li a.active-link {
 }
 
 .contact-btn:hover {
-  background: #1e8e83; /* Darker teal on hover */
+  background: #1e8e83;
 }
 
+/* Tablet (768px to 1023px) */
+@media (max-width: 1023px) {
+  header {
+    padding: 15px 30px;
+  }
+
+  .logo img {
+    width: 35px;
+  }
+
+  .logo span {
+    font-size: 20px;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .language-dropdown select {
+    font-size: 14px;
+  }
+
+  .contact-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  /* Ensure desktop-language-dropdown is visible, mobile-language-dropdown is hidden */
+  .desktop-language-dropdown {
+    display: flex;
+  }
+
+  .mobile-language-dropdown {
+    display: none;
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  header {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .logo img {
+    width: 350px;
+  }
+
+  .logo span {
+    font-size: 18px;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-language-dropdown {
+    display: flex; /* Show the mobile language dropdown */
+    margin-right: 10px;
+  }
+
+  .mobile-language-dropdown select {
+    font-size: 14px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  nav.nav-open {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .header-right {
+    display: none; /* Hide the entire header-right (desktop-language-dropdown and Contact Us) on mobile */
+  }
+}
+
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+  .desktop-language-dropdown {
+    display: flex; /* Ensure desktop language dropdown is visible */
+  }
+
+  .mobile-language-dropdown {
+    display: none; /* Hide mobile language dropdown */
+  }
+}
+/* Footer Styles */
 footer {
-  background: #26A69A;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+  background: #ffffff;
+  border-top: 1px solid #e0e0e0; /* Subtle border to separate from main content */
+  padding: 30px 20px; /* Padding around the footer */
+  text-align: center; /* Center-align all content */
+}
+
+.footer-container {
+  max-width: 1200px; /* Match the container width used in other components */
+  margin: 0 auto; /* Center the container */
 }
 
 .footer-links {
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: center; /* Center the links horizontally */
+  gap: 30px; /* Space between links */
+  margin-bottom: 15px; /* Space between links and copyright notice */
 }
 
 .footer-links a {
-  color: #fff;
   text-decoration: none;
-  margin: 0 20px;
+  color: #26A69A; /* Teal color to match branding */
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #1e8e83; /* Darker teal on hover */
 }
 
 footer p {
   font-size: 14px;
+  color: #666; /* Gray color for the copyright notice */
+  margin: 0;
 }
+
+/* Tablet (768px to 1023px) */
+@media (max-width: 1023px) {
+  footer {
+    padding: 20px 15px;
+  }
+
+  .footer-links {
+    gap: 20px; /* Reduce gap between links */
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  footer {
+    padding: 15px 10px;
+  }
+
+  .footer-links {
+    flex-direction: column; /* Stack links vertically on mobile */
+    gap: 10px; /* Smaller gap between stacked links */
+    margin-bottom: 10px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  footer p {
+    font-size: 12px;
+    line-height: 1.5; /* Improve readability on mobile */
+  }
+}
+
+/* App Container Styles */
+.app {
+  /* No flexbox needed since we're using position: fixed for the footer */
+}
+
+/* Add padding to main to prevent overlap with fixed footer */
+main {
+  padding-bottom: 100px; /* Adjust based on the footer's height */
+}
+
+/* Footer Styles */
+footer {
+  background: #26A69A; /* Light blue background */
+  border-top: 1px solid #e0e0e0;
+  padding: 30px 20px;
+  text-align: center;
+  position: fixed; /* Fix the footer to the bottom */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Ensure the footer spans the full width */
+  z-index: 1000; /* Ensure the footer stays above other content */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #1e8e83;
+}
+
+footer p {
+  font-size: 14px;
+  color: wheat;
+  margin: 0;
+}
+
+/* Tablet (768px to 1023px) */
+@media (max-width: 1023px) {
+  main {
+    padding-bottom: 80px; /* Adjust padding for smaller footer height */
+  }
+
+  footer {
+    padding: 20px 15px;
+  }
+
+  .footer-links {
+    gap: 20px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  main {
+    padding-bottom: 120px; /* Adjust padding for stacked layout */
+  }
+
+  footer {
+    padding: 15px 10px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  footer p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+/* Existing styles for header, etc., remain unchanged */

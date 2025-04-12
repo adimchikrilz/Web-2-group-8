@@ -1,125 +1,320 @@
 .quick-check-page {
     padding: 50px;
     text-align: center;
+    background: #fff; /* White background as per Figma */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .title-h1 {
     font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-weight: 700;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    color: #333;
   }
   
   .real-or-fake {
     font-size: 24px;
+    font-weight: 500;
     margin-bottom: 5px;
+    color: #333;
   }
   
-  .wallet-status {
+  .verify-now {
+    font-size: 18px;
+    font-weight: 400;
     margin-bottom: 20px;
-  }
-  
-  .connected {
-    font-size: 14px;
     color: #666;
   }
   
   .quick-check-form {
-    display: inline-block;
+    width: 100%;
   }
   
   .input-container {
-    background: #fff;
-    padding: 20px;
+    background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px; /* Increased width to make the input box wider */
+    width: 90%; /* Adjusted to be wider but still responsive */
+    margin: 0 auto;
+  }
+  
+  .input-wrapper {
+    border: 1px solid #ccc; /* Border around the entire input box */
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   
   .claim-input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: none; /* Remove border from the input itself */
+    font-size: 16px;
+    outline: none; /* Remove default outline on focus */
   }
   
-  .upload-button,
-  .offline-toggle,
-  .verify-button {
-    padding: 10px 20px;
-    margin: 0 5px;
-    border-radius: 5px;
-    cursor: pointer;
+  .button-group {
+    display: flex;
+    justify-content: space-between; /* Space between left-buttons and verify-button */
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .left-buttons {
+    display: flex;
+    gap: 10px; /* Space between Upload and Offline buttons */
   }
   
   .upload-button,
   .offline-toggle {
+    padding: 8px 12px;
     background: #f5f5f5;
     border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+  }
+  
+  .upload-button:hover,
+  .offline-toggle:hover {
+    background: #e0e0e0;
+  }
+  
+  .upload-button:disabled,
+  .offline-toggle:disabled {
+    background: #f5f5f5;
+    cursor: not-allowed;
+  }
+  
+  .upload-icon,
+  .offline-icon {
+    margin-right: 5px;
   }
   
   .verify-button {
+    padding: 8px 20px;
     background: #26A69A;
     color: #fff;
-  border: none;
-}
-
-.upload-icon,
-.offline-icon {
-  margin-right: 5px;
-}
-
-.result-container {
-  text-align: center;
-}
-
-.result-title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.result-title.true {
-  color: #00cc00;
-}
-
-.result-title.false {
-  color: #ff0000;
-}
-
-.result-title.uncertain {
-  color: #ff9900;
-}
-
-.result-explanation {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.blockchain-info {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.result-buttons {
-  margin-bottom: 20px;
-}
-
-.view-result-button,
-.check-another-button {
-  padding: 10px 20px;
-  background: #26A69A;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.learn-more-link {
-  background: none;
-  border: none;
-  color: #26A69A;
-  text-decoration: underline;
-  cursor: pointer;
-}
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .verify-button:hover {
+    background: #1e8e83;
+  }
+  
+  .verify-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .result-container {
+    text-align: center;
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .result-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .result-title.true {
+    color: #00cc00; /* Green for true */
+  }
+  
+  .result-title.false {
+    color: #ff0000; /* Red for false */
+  }
+  
+  .result-title.uncertain {
+    color: #ff9900; /* Orange for uncertain */
+  }
+  
+  .result-explanation {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .blockchain-info {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .result-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .check-another-button {
+    padding: 10px 20px;
+    background: #26A69A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .check-another-button:hover {
+    background: #1e8e83;
+  }
+  
+  .view-result-button {
+    padding: 10px 20px;
+    background: #26A69A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .view-result-button:hover {
+    background: #1e8e83;
+  }
+  
+  .learn-more-link {
+    background: none;
+    border: none;
+    color: #26A69A;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  /* Tablet (768px to 1023px) */
+  @media (max-width: 1023px) {
+    .quick-check-page {
+      padding: 30px;
+    }
+  
+    .title-h1 {
+      font-size: 28px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  
+    .real-or-fake {
+      font-size: 20px;
+    }
+  
+    .verify-now {
+      font-size: 16px;
+    }
+  
+    .input-container {
+      width: 95%; /* Slightly wider on tablet */
+    }
+  
+    .claim-input {
+      font-size: 14px;
+    }
+  
+    .upload-button,
+    .offline-toggle,
+    .verify-button {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  
+    .result-title {
+      font-size: 28px;
+    }
+  
+    .result-explanation {
+      font-size: 16px;
+    }
+  
+    .blockchain-info {
+      font-size: 12px;
+    }
+  }
+  
+  /* Mobile (up to 767px) */
+  @media (max-width: 767px) {
+    .quick-check-page {
+      padding: 20px;
+    }
+  
+    .title-h1 {
+      font-size: 24px;
+    }
+  
+    .real-or-fake {
+      font-size: 18px;
+    }
+  
+    .verify-now {
+      font-size: 14px;
+    }
+  
+    .input-container {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .button-group {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .left-buttons {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+  
+    .upload-button,
+    .offline-toggle,
+    .verify-button {
+      width: 100%;
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .result-title {
+      font-size: 24px;
+    }
+  
+    .result-explanation {
+      font-size: 14px;
+    }
+  
+    .blockchain-info {
+      font-size: 12px;
+    }
+  
+    .result-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }

@@ -11,11 +11,11 @@ const LandingPage = () => {
 
   return (
     <section className="hero">
-      <h1>{t.landingTitle}</h1>
-      <h2>{t.landingSubtitle}</h2>
-      <p>{t.landingDescription}</p>
+      <h1>TruthCheck!</h1>
+      <h2>Your shield against lies.</h2>
+      <p>Verify news and claims in Nigeria <br/> instantly with the QuickCheck Tool.</p>
       <button className="cta-btn" onClick={() => navigate('/quick-check')}>
-        {t.searchButton}
+        Search with QuickCheck
       </button>
     </section>
   );
